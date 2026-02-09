@@ -1,5 +1,7 @@
-AI-CliniScan — Chest X-ray Abnormality Detection
-📌 Overview
+# AI-CliniScan — Chest X-ray Abnormality Detection
+
+## 📌 Overview
+
 
 AI-CliniScan is a medical AI project designed to detect 14 chest X-ray abnormalities using YOLOv8 object detection.
 The project focuses on building an end-to-end medical imaging pipeline, from DICOM preprocessing to model training, evaluation, and analysis.
@@ -22,13 +24,16 @@ Aortic enlargement, Atelectasis, Calcification, Cardiomegaly, Consolidation,
 ILD, Infiltration, Lung Opacity, Nodule, Other lesion,
 Pleural effusion, Pleural thickening, Pneumothorax, Fibrosis
 
-🧪 Model Details
-Component	Value
-Architecture	YOLOv8-Nano
-Parameters	3.01M
-Input Size	640 × 640
-Epochs	30
-Training Time	~5.3 hours (CPU)
+## 🧪 Model Details
+
+| Component | Value |
+|---------|------|
+| Architecture | YOLOv8-Nano |
+| Parameters | 3.01M |
+| Input Size | 640 × 640 |
+| Epochs | 30 |
+| Training Time | ~5.3 hours (CPU) |
+
 📊 Performance Summary
 
 Best mAP50: 0.246
@@ -57,7 +62,9 @@ Albumentations
 
 Jupyter Notebook
 
-🚀 Run Inference
+## 🚀 Run Inference
+
+```python
 from ultralytics import YOLO
 
 model = YOLO("best.pt")
@@ -67,6 +74,7 @@ results = model.predict(
     iou=0.4,
     augment=True
 )
+
 
 
 
@@ -83,3 +91,6 @@ Ensemble techniques
 📜 Disclaimer
 
 This project is for educational and research purposes only and is not intended for clinical diagnosis.
+
+```md
+- GitHub (version control & project hosting)
